@@ -45,7 +45,6 @@ describe("WithdrawForm", () => {
       }),
     });
 
-    // @ts-expect-error allow override for tests
     global.fetch = fetchMock;
 
     render(<WithdrawForm />);
@@ -79,7 +78,6 @@ describe("WithdrawForm", () => {
       }),
     });
 
-    // @ts-expect-error allow override for tests
     global.fetch = fetchMock;
 
     render(<WithdrawForm />);
@@ -111,7 +109,6 @@ describe("WithdrawForm", () => {
       }),
     });
 
-    // @ts-expect-error allow override for tests
     global.fetch = fetchMock;
 
     render(<WithdrawForm />);
@@ -122,7 +119,6 @@ describe("WithdrawForm", () => {
 
     fireEvent.click(submitButton);
 
-    // Попытка повторного submit во время загрузки
     fireEvent.click(submitButton);
 
     await waitFor(() => {
